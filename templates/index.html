@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <h1>Знакомство</h1>
+        <label>Можете указать немного информации о вас? Так нам будет проще общаться :)</label>
+        <p>Введите свое имя</p>
+        <input type="text" name="name"/>
+        <p>Введите номер карты</p>
+        <input type="text" name="cardNumber"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
